@@ -1,1 +1,1 @@
-# cracking_the_code_interview
+# Markdrake's excercises for Cracking the code interview book in ruby language
