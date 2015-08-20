@@ -4,7 +4,7 @@ import unittest
 from exercises import str_unique_chars
 
 
-class TestUniqueChars(unittest.TestCase):
+class TestUniqueCharsTestCase(unittest.TestCase):
     def test_string_with_unique_chars_only(self):
         input_text = 'string'
         expected = True

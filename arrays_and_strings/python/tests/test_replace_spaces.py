@@ -4,7 +4,7 @@ import unittest
 from exercises import str_replace_spaces
 
 
-class TestReplaceSpaces(unittest.TestCase):
+class TestReplaceSpacesTestCase(unittest.TestCase):
     def test_string_replace_spaces(self):
         input_text = 'Hello world!'
         expected = 'Hello%20world!'

@@ -8,7 +8,7 @@ This module is imported by the unit testing classes and run assertions through t
 
 def str_unique_chars(text):
     """
-    Problem : Create a function that determines
+    1.1 Problem : Create a function that determines
     if the string contains only unique chars.
 
     :param text: string
@@ -37,4 +37,26 @@ def str_replace_spaces(text, replace='%20'):
     :param replace: string
     :return: string
     """
-    return text.replace (" ", replace)
+    return text.replace(" ", replace)
+
+
+def str_compress(text):
+    """
+    Problem 1.5: Create method that compress a string using the count of repeated chars
+    Example: aabccdddd would become a2b1c2d4 (only compress when the result is smaller than original)
+
+    :param text: string
+    :return: string
+    """
+
+    repeated_chars = {}
+    for c in text:
+        if c == ' ':
+            continue
+        repeated_chars[c] = repeated_chars.get(c, 0) + 1
+
+    # We unpack the characters and repetitions and join them as string
+    result = ["%s%d" % (k, v) for k, v in repeated_chars.items()]
+    result = "".join(result)
+
+    return result if len(result) < len(text) else text
